@@ -28,7 +28,6 @@ unsigned int findLowPriority(char *expression, unsigned int leftIndex, unsigned 
 TTree *createTree(char *expression, unsigned int leftIndex, unsigned int rightIndex);
 void inorderTreeWalk(TTree *tree);
 
-int *_priorityArray;
 
 int main()
 {
