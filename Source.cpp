@@ -8,7 +8,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#define EXPRESSION "w*(a+b+c*(y-g*d)^n^k+s*l)/(x-f*t*p+w)^e"
+#define EXPRESSION "w*(a+b+n+c*(y-g*d)^n^k+s*l)/(x-f*t*p+w)^e"
 
 #define OPERANDS true
 #define OPERATORS false
@@ -132,7 +132,7 @@ unsigned int findLowPriority(char *expression, unsigned int leftIndex, unsigned 
 			operationPriority = 3;
 		else if (charIsOperand(expression[i]))
 			operationPriority = 4;
-		if (lowPriority > breackPriority + operationPriority)
+		if (lowPriority >= breackPriority + operationPriority)
 		{
 			position = i;
 			lowPriority = breackPriority + operationPriority;
