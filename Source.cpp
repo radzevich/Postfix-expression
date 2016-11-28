@@ -1,6 +1,3 @@
-//Преобразователь стандартной записи в обратную польскую
-//Программный ввод выражения и его проверка не реализован полностью, 
-//поэтому для ввода выражения, задайте его после "#define EXPRESSION"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -39,18 +36,6 @@ int main()
 
 char *getExpression()
 {
-	/*char *expression = (char*)calloc(100 * sizeof(char), 1);
-	while (true)
-	{
-		scanf_s("%s100", expression);
-		char *emptyString = "";
-		if (!(bool)strcmp(emptyString, expression))
-			return NULL;
-		else if (!findInvalidSymbolsInExpression(expression, strlen(expression)))
-			return expression;
-		else
-			printf("Invalid input");
-	}*/
 	char *expression = EXPRESSION;
 	return expression;
 }
@@ -60,13 +45,6 @@ bool findInvalidSymbolsInExpression(char *expression, int size)
 	short int weight = 0;
 	short int bracketCount = 0;
 	bool flag = true;
-	for (int i = 0; i < size; i++)
-	{
-		if (flag)
-		{
-			
-		}
-	}
 	return false;
 }
 
